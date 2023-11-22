@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fz-default;
+  line-height: 24px;
+  font-family: $ff-josefin-sans;
+  color: $color-default-black;
+
+  scroll-behavior: smooth;
+}

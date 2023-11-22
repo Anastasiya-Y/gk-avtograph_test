@@ -1,0 +1,29 @@
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Josefin Sans";
+
+  font-display: swap;
+  src: url("fonts/josefin-sans-light.woff2") format("woff2"),
+  url("fonts/josefin-sans-light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+
+  font-display: swap;
+  src: url("fonts/josefin-sans-regular.woff2") format("woff2"),
+  url("fonts/josefin-sans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Josefin Sans";
+
+  font-display: swap;
+  src: url("fonts/josefin-sans-bold.woff2") format("woff2"),
+  url("fonts/josefin-sans-bold.woff") format("woff");
+}
