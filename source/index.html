@@ -8,14 +8,74 @@
     <link rel="preload" href="fonts/montserrat-light.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header></header>
     <main>
-      <div>Привет! This is 'hello'!</div>
+      <section class="promo">
+        <div class="container">
+          <h1 class="visually-hidden">Сайт магазина.</h1>
+          <div class="promo__container"></div>
+        </div>
+      </section>
+      <section class="new-items">
+            <div class="container">
+              <div class="new-items__text">
+                <h2>Новинки магазина</h2>
+                <svg width="3" height="16">
+                  <use href="img/sprite.svg#separator"></use>
+                </svg>
+                <a class="new-items__link" href="#">Смотреть все</a>
+              </div>
+            </div>
+            <div class="new-items__container swiper-container">
+              <ul class="new-items__wrapper swiper-wrapper">
+                <li class="new-items__slide swiper-slide">
+                  <div class="new-items__additional">
+                    <span>Акция</span>
+                    <div class="new-items__delivery">
+                      <svg width="24" height="12">
+                        <use href="img/sprite.svg#delivery"></use>
+                      </svg>
+                      <span>Бесплатно</span>
+                    </div>
+                    <svg width="24" height="20">
+                      <use href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <div class="new-items__info">
+                    <div class="new-items__image-wrapper">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/new-items/grinding-disc-desktop.webp 1x, img/content/new-items/grinding-disc-desktop@2x.webp 2x">
+                        <source type="image/webp" srcset="img/content/new-items/grinding-disc.webp 1x, img/content/new-items/grinding-disc@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/content/new-items/grinding-disc-desktop.png 1x, img/content/new-items/grinding-disc-desktop@2x.png 2x">
+                        <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного.">
+                      </picture>
+                    </div>
+                    <h3>Диск шлифовальный перфорированный</h3>
+                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <span>3&nbsp;850&nbsp;р.</span>
+                    <button class="new-items__button btn" type="button">
+                      <svg width="12" height="12">
+                        <use href="img/sprite.svg#cart"></use>
+                      </svg>
+                      <span>В корзину</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="new-items__buttons">
+              <div class="new-items__button new-items__button--prev"></div>
+              <div class="new-items__button new-items__button--next"></div>
+            </div>
+
+      </section>
     </main>
     <footer></footer>
-    <script src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js" type="module" ></script>
   </body>
 </html>

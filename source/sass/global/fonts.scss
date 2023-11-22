@@ -5,7 +5,7 @@
 
   font-display: swap;
   src: url("../fonts/montserrat-light.woff2") format("woff2"),
-  url("../fonts/montserrat-light.woff") format("woff");
+      url("../fonts/montserrat-light.woff") format("woff");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 
   font-display: swap;
   src: url("../fonts/montserrat-regular.woff2") format("woff2"),
-  url("../fonts/montserrat-regular.woff") format("woff");
+      url("../fonts/montserrat-regular.woff") format("woff");
 }
 
 @font-face {
@@ -25,7 +25,7 @@
 
   font-display: swap;
   src: url("../fonts/montserrat-bold.woff2") format("woff2"),
-  url("../fonts/montserrat-bold.woff") format("woff");
+      url("../fonts/montserrat-bold.woff") format("woff");
 }
 
 @font-face {
@@ -35,9 +35,5 @@
 
   font-display: swap;
   src: url("../fonts/montserrat-black.woff2") format("woff2"),
-  url("../fonts/montserrat-black.woff") format("woff");
-}
-
-body {
-  background-color: aqua;
+      url("../fonts/montserrat-black.woff") format("woff");
 }

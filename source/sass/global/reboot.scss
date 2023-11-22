@@ -8,9 +8,19 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
+  line-height: normal;
   font-family: $ff-montserrat;
   color: $color-default-black;
 
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

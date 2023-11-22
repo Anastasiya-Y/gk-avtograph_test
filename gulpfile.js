@@ -9,10 +9,22 @@ import {deleteAsync as del} from 'del';
 import csso from 'postcss-csso';
 import htmlmin from 'gulp-html-minifier';
 import versionNumber from 'gulp-version-number';
-import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore'
+import svgstore from 'gulp-svgstore';
+import webpack from 'webpack-stream';
+
+const scripts = () => {
+  return gulp.src('source/js/main.js', { sourcemaps: true })
+      .pipe(plumber())
+      .pipe(webpack({
+          mode: 'development',
+          output: {
+              filename: 'main.min.js',
+          }
+      }))
+      .pipe(gulp.dest('build/js/'))
+}
 
 const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -51,24 +63,6 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-const scripts = () => {
-  return gulp.src('source/js/main.js', { sourcemaps: true })
-    .pipe(terser())
-    .pipe(rename(function(path) {
-      path.extname = '.min.js'
-    }))
-    .pipe(gulp.dest('build/js'));
-}
-
-const vendorScripts = () => {
-  return gulp.src('source/js/vendor/*.js')
-    .pipe(terser())
-    .pipe(rename(function(path) {
-      path.extname = '.min.js'
-    }))
-    .pipe(gulp.dest('build/js'));
-}
-
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
@@ -101,7 +95,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img/sprite'));
+    .pipe(gulp.dest('build/img/'));
 }
 
 const copy = (done) => {
@@ -151,7 +145,6 @@ export const build = gulp.series(
     styles,
     html,
     scripts,
-    vendorScripts,
     optimizeSVG,
     sprite,
     createWebP
@@ -167,7 +160,6 @@ export const start = gulp.series(
     styles,
     html,
     scripts,
-    vendorScripts,
     optimizeSVG,
     sprite,
     createWebP

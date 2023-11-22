@@ -5,9 +5,15 @@ $color-default-black:               #000000;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
+$color-burnt-orange:                #ff812e;
+$color-persimmon:                   #ea5d00;
+$color-romantic:                    #fdc6a2;
+$color-whisper:                     #e9e9e9;
+$color-sauvignon:                   #eae7e5;
+
 // Fonts
 
-$fz-default:                        16px;
+$fz-default:                        13px;
 
 $ff-montserrat:                     "Montserrat", "Arial", sans-serif;
 
@@ -20,6 +26,7 @@ $trans-default:                     0.3s $tf-default;
 
 $vp-375:                            375px;
 $vp-768:                            768px;
+$vp-1200:                           1440px;
 $vp-1440:                           1440px;
 
 // Retina
