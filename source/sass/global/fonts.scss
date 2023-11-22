@@ -1,29 +1,43 @@
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Josefin Sans";
+  font-family: "Montserrat";
 
   font-display: swap;
-  src: url("fonts/josefin-sans-light.woff2") format("woff2"),
-  url("fonts/josefin-sans-light.woff") format("woff");
+  src: url("../fonts/montserrat-light.woff2") format("woff2"),
+  url("../fonts/montserrat-light.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Josefin Sans";
+  font-family: "Montserrat";
 
   font-display: swap;
-  src: url("fonts/josefin-sans-regular.woff2") format("woff2"),
-  url("fonts/josefin-sans-regular.woff") format("woff");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"),
+  url("../fonts/montserrat-regular.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Josefin Sans";
+  font-family: "Montserrat";
 
   font-display: swap;
-  src: url("fonts/josefin-sans-bold.woff2") format("woff2"),
-  url("fonts/josefin-sans-bold.woff") format("woff");
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"),
+  url("../fonts/montserrat-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Montserrat";
+
+  font-display: swap;
+  src: url("../fonts/montserrat-black.woff2") format("woff2"),
+  url("../fonts/montserrat-black.woff") format("woff");
+}
+
+body {
+  background-color: aqua;
 }
