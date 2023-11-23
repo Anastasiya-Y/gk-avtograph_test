@@ -598,6 +598,39 @@
           </div>
         </div>
       </footer>
+      <!-- Модалка -->
+      <div class="modal">
+        <div class="modal__wrapper">
+          <button class="modal__close-button" type="button" aria-label="Закрыть попап">
+            <svg width="15" height="15">
+              <use href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <h2>Обратная связь</h2>
+          <form action="#" method="post">
+            <div class="modal__fields-wrapper">
+              <input type="text" name="name" minlength="1" placeholder="Имя" required>
+              <input type="tel" name="tel" placeholder="Телефон" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <textarea name="user-message" placeholder="Сообщение" required></textarea>
+            </div>
+            <div class="modal__buttons-wrapper">
+              <button class="modal__button btn" type="submit">
+                <svg width="22" height="19">
+                  <use href="img/sprite.svg#send"></use>
+                </svg>
+                <span>Отправить</span>
+              </button>
+              <div class="modal__file-input">
+                <input type="file" name="file" accept="image/png,image/jpeg">
+                <svg width="20" height="16">
+                  <use href="img/sprite.svg#file"></use>
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
