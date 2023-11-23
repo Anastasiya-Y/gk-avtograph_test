@@ -1,0 +1,158 @@
+.main-footer {
+  padding: 59px 0 70px 0;
+  background-color: $color-nero;
+}
+
+.main-footer__wrapper {
+  padding: 0 29px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-rows: repeat(3, auto);
+
+  @include vp-768 {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 6.11% 1fr 12.7% auto;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @include vp-1200 {
+    grid-template-columns: 22.47% 5.11% 45.06% 9.7% 17.66%;
+    grid-template-rows: auto;
+  }
+}
+
+.main-footer__contacts {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+  margin-bottom: 62.5px;
+
+  @include vp-768 {
+    grid-column: 1 / 2;
+  }
+}
+
+.main-footer__logo {
+  display: none;
+
+  @include vp-768 {
+    display: block;
+  }
+}
+
+.main-footer__email-wrapper,
+.main-footer__address-wrapper,
+.main-footer__work-hours-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  color: $color-whisper;
+  font-size: 15px;
+  font-weight: 300;
+
+  svg {
+    margin-top: 2px;
+  }
+}
+
+.main-footer__work-hours-wrapper {
+  margin-bottom: 32px;
+}
+
+.main-footer__email {
+  color: $color-burnt-orange;
+}
+
+.main-footer__address {
+  font-style: normal;
+}
+
+
+.main-footer__button {
+  padding: 13px 20px 11px 18px;
+  min-width: 215px;
+  width: 57.18vw;
+  align-self: center;
+
+  svg {
+    width: 16px;
+    height: 20px;
+    margin-right: 22px;
+  }
+
+  @include vp-768 {
+    min-width: auto;
+    width: auto;
+    max-width: 228px;
+  }
+}
+
+.main-footer__info {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 52px;
+
+  @include vp-768 {
+    grid-column: 5 / 6;
+  }
+}
+
+.main-footer__tel {
+  color: $color-whisper;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.main-footer__work-hours {
+  span {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.main-footer__call {
+  display: inline-block;
+  color: $color-burnt-orange;
+  align-self: center;
+  margin-bottom: 32px;
+
+  background-color: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.main-footer__social {
+  margin: 0 auto;
+}
+
+.main-footer__copyright {
+  text-align: left;
+  font-size: 14px;
+
+  p {
+    margin: 0 0 19px 0;
+    color: $color-zambezi;
+  }
+
+  span {
+    color: $color-whisper;
+  }
+
+  @include vp-768 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  @include vp-1200 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+}

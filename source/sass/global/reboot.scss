@@ -15,6 +15,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
 /* body {
   overflow-x: hidden;
   width: 100%;
