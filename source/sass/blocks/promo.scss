@@ -166,6 +166,7 @@
   background-color: $color-transparent;
   border-radius: 5px;
   cursor: pointer;
+  user-select: none;
 }
 
 .promo__bullet:not(:last-child) {

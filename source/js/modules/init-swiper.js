@@ -67,8 +67,8 @@ const initSwiper = () => {
       bulletClass: 'promo__bullet',
       bulletActiveClass: 'promo__bullet--active',
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      renderBullet: (index, className) => {
+        return '<span class=\"' + className + '\">' + (index + 1) + '</span>';
       },
     },
   });
