@@ -1,5 +1,6 @@
 const newItemsContainer = document.querySelector('.new-items__container');
 const brandsContainer = document.querySelector('.brands__container');
+const promoContainer = document.querySelector('.promo__container');
 
 const initSwiper = () => {
   const newItemsSwiper = new Swiper(newItemsContainer, {
@@ -50,6 +51,24 @@ const initSwiper = () => {
       768: {
         slidesPerView: 'auto',
         spaceBetween: 73,
+      },
+    },
+  });
+
+  const promoSwiper = new Swiper(promoContainer, {
+    navigation: {
+      nextEl: '.promo__swiper-button--next',
+      prevEl: '.promo__swiper-button--prev',
+    },
+    pagination: {
+      el: '.promo__pagination',
+      type: 'bullets',
+      bulletElement: 'button',
+      bulletClass: 'promo__bullet',
+      bulletActiveClass: 'promo__bullet--active',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
   });
