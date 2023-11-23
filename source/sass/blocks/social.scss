@@ -6,4 +6,16 @@
   grid-template-columns: repeat(4, 20px);
   gap: 23.5px;
   align-items: center;
+
+  @include vp-768 {
+    grid-template-columns: repeat(4, 20px) 17px;
+  }
+}
+
+.social__item--telegram {
+  display: none;
+
+  @include vp-768 {
+    display: flex;
+  }
 }

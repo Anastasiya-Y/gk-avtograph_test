@@ -1,6 +1,10 @@
 .main-footer {
   padding: 59px 0 70px 0;
   background-color: $color-nero;
+
+  @include vp-768 {
+    padding: 60px 0 109px 0;
+  }
 }
 
 .main-footer__wrapper {
@@ -33,6 +37,7 @@
 
   @include vp-768 {
     grid-column: 1 / 2;
+    margin: 0;
   }
 }
 
@@ -99,6 +104,7 @@
 
   @include vp-768 {
     grid-column: 5 / 6;
+    margin: 0;
   }
 }
 
@@ -150,10 +156,12 @@
   @include vp-768 {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    margin-top: 64px;
   }
 
   @include vp-1200 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    margin: 0;
   }
 }
