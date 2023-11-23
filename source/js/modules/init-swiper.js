@@ -1,4 +1,5 @@
 const newItemsContainer = document.querySelector('.new-items__container');
+const brandsContainer = document.querySelector('.brands__container');
 
 const initSwiper = () => {
   const newItemsSwiper = new Swiper(newItemsContainer, {
@@ -31,6 +32,24 @@ const initSwiper = () => {
       1200: {
         slidesPerView: 4,
         spaceBetween: 30,
+      },
+    },
+  });
+
+  const brandsSwiper = new Swiper(brandsContainer, {
+    navigation: {
+      nextEl: '.brands__swiper-button--next',
+      prevEl: '.brands__swiper-button--prev',
+    },
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 26,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 73,
       },
     },
   });
