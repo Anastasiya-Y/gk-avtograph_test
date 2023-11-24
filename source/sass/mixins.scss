@@ -33,6 +33,12 @@
 //   }
 // }
 
+@mixin vp-375 {
+  @media (min-width: $vp-375) {
+    @content;
+  }
+}
+
 @mixin vp-768 {
   @media (min-width: $vp-768) {
     @content;

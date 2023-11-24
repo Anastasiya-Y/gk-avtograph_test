@@ -60,30 +60,18 @@
   height: auto;
 }
 
-.brands__buttons {
-  display: none;
-
-  @include vp-768 {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -25px;
-    width: calc(100% + 50px);
-    z-index: 1;
-  }
-}
-
 .brands__swiper-button {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 13.68px;
   color: $color-grey;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 
   padding: 10px;
-  top: 198px;
   border: none;
   background-color: $color-whisper;
   transition: all $trans-default;
@@ -120,11 +108,15 @@
 }
 
 .brands__swiper-button--prev {
-  margin-right: 20px;
+  left: 0;
 
   svg {
     transform: rotate(180deg);
   }
+}
+
+.brands__swiper-button--next {
+  right: 0;
 }
 
 
