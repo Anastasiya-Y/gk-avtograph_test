@@ -100,7 +100,7 @@
   border: none;
   background-color: $color-whisper;
   transition: all $trans-default;
-  cursor: pointer;
+  // cursor: $custom-cursor;
 
   svg {
     transition: all $trans-default;
@@ -165,7 +165,7 @@
   color: $color-default-black;
   background-color: $color-transparent;
   border-radius: 5px;
-  cursor: pointer;
+  // cursor: $custom-cursor;
   user-select: none;
 }
 

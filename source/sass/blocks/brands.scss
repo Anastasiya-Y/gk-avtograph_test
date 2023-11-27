@@ -23,6 +23,7 @@
 .brands__link {
   color: $color-burnt-orange;
   margin-top: 4px;
+  //cursor: $custom-cursor;
 
   svg {
     // transform: scale(0.64);
@@ -75,7 +76,7 @@
   border: none;
   background-color: $color-whisper;
   transition: all $trans-default;
-  cursor: pointer;
+  // cursor: $custom-cursor;
 
   svg {
     transition: all $trans-default;

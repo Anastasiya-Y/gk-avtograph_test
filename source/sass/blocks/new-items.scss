@@ -19,6 +19,7 @@
 .new-items__link {
   color: $color-burnt-orange;
   margin-top: 4px;
+  // cursor: $custom-cursor;
 }
 
 .new-items__container {
@@ -35,8 +36,9 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  transition: all $trans-default;
+  transition: all $trans-long;
   max-width: 160px;
+  // cursor: $custom-cursor;
 
   @include vp-768 {
     max-width: none;
@@ -115,6 +117,7 @@
 
 .new-items__button {
   font-size: 8px;
+  // cursor: $custom-cursor;
 
   @include vp-375 {
     font-size: 10px;
@@ -136,7 +139,7 @@
   border: none;
   background-color: $color-whisper;
   transition: all $trans-default;
-  cursor: pointer;
+  // cursor: $custom-cursor;
 
   svg {
     transition: all $trans-default;

@@ -83,9 +83,9 @@ const createWebP = () => {
 }
 
 const optimizeSVG = () => {
-  return gulp.src(['source/img/icons/*.svg'])
+  return gulp.src(['source/img/svg/*.svg'])
     .pipe(svgmin())
-    .pipe(gulp.dest('build/img/icons'));
+    .pipe(gulp.dest('build/img/svg'));
 }
 
 const sprite = () => {

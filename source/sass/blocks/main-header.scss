@@ -1,0 +1,160 @@
+.main-header__up {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    width: 200vw;
+    height: 1px;
+    background-color: $color-whisper;
+  }
+}
+
+.main-header__contacts-button {
+  display: grid;
+  grid-template-columns: 22px min-content;
+  gap: 9.3px;
+  // cursor: $custom-cursor;
+  margin-right: 20px;
+  user-select: none;
+  background-color: $color-transparent;
+  border: none;
+  align-items: center;
+}
+
+.main-header__logo {
+  // cursor: $custom-cursor;
+
+  svg {
+    fill: $color-default-black;
+  }
+}
+
+.main-header__phone-wrapper {
+  margin-left: 20px;
+}
+
+.main-header__tel-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.main-header__tel {
+  // cursor: $custom-cursor;
+  font-size: 15px;
+  color: $color-default-black;
+  font-weight: 300;
+}
+
+.main-header__tel:first-child {
+  font-weight: 900;
+}
+
+.main-header__tel-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.main-header__call {
+  display: inline-block;
+
+  background-color: $color-transparent;
+  border: none;
+  // cursor: $custom-cursor;
+
+  user-select: none;
+}
+
+.main-header__whatsapp {
+  color: $color-burnt-orange;
+  display: inline-block;
+  user-select: none;
+  // cursor: $custom-cursor;
+}
+
+.main-header__down {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    width: 200vw;
+    height: 1px;
+    background-color: $color-default-black;
+  }
+}
+
+.main-header__catalog-button {
+  // cursor: $custom-cursor;
+  margin-right: 20px;
+  user-select: none;
+  background-color: $color-transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.main-header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header__nav-link {
+  display: flex;
+  color: $color-default-black;
+  min-width: 151px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.main-header__nav-link--promotion {
+  gap: 10px;
+
+  span:first-child {
+    font-weight: 900;
+  }
+}
+
+.main-header__additional {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 32px;
+  align-items: center;
+}
+
+.main-header__button {
+  // cursor: $custom-cursor;
+  cursor: pointer;
+  background-color: $color-transparent;
+  border: none;
+}
+
+.main-header__button--cart {
+  display: grid;
+  grid-template-columns: 22px min-content;
+  gap: 6px;
+
+  span {
+    align-self: center;
+  }
+}

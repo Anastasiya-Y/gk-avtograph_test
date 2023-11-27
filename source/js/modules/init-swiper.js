@@ -1,8 +1,27 @@
+const promoContainer = document.querySelector('.promo__container');
 const newItemsContainer = document.querySelector('.new-items__container');
 const brandsContainer = document.querySelector('.brands__container');
-const promoContainer = document.querySelector('.promo__container');
 
 const initSwiper = () => {
+  const promoSwiper = new Swiper(promoContainer, {
+    speed: 1500,
+    navigation: {
+      nextEl: '.promo__swiper-button--next',
+      prevEl: '.promo__swiper-button--prev',
+    },
+    pagination: {
+      el: '.promo__pagination',
+      type: 'bullets',
+      bulletElement: 'button',
+      bulletClass: 'promo__bullet',
+      bulletActiveClass: 'promo__bullet--active',
+      clickable: true,
+      renderBullet: (index, className) => {
+        return '<span class=\"' + className + '\">' + (index + 1) + '</span>';
+      },
+    },
+  });
+
   const newItemsSwiper = new Swiper(newItemsContainer, {
     navigation: {
       nextEl: '.new-items__swiper-button--next',
@@ -10,7 +29,6 @@ const initSwiper = () => {
     },
     //centeredSlides: true,
     //cssMode: true,
-
     watchSlidesProgress: true,
     //watchOverflow: true,
     // simulateTouch: false,
@@ -50,24 +68,6 @@ const initSwiper = () => {
       768: {
         slidesPerView: 'auto',
         spaceBetween: 73,
-      },
-    },
-  });
-
-  const promoSwiper = new Swiper(promoContainer, {
-    navigation: {
-      nextEl: '.promo__swiper-button--next',
-      prevEl: '.promo__swiper-button--prev',
-    },
-    pagination: {
-      el: '.promo__pagination',
-      type: 'bullets',
-      bulletElement: 'button',
-      bulletClass: 'promo__bullet',
-      bulletActiveClass: 'promo__bullet--active',
-      clickable: true,
-      renderBullet: (index, className) => {
-        return '<span class=\"' + className + '\">' + (index + 1) + '</span>';
       },
     },
   });

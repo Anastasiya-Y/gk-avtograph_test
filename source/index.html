@@ -13,7 +13,75 @@
   </head>
   <body>
     <div class="wrapper">
-      <header></header>
+      <header class="main-header">
+        <div class="container">
+          <div class="main-header__wrapper">
+            <div class="main-header__up">
+              <button class="main-header__contacts-button">
+                <svg width="13" height="22">
+                  <use href="img/sprite.svg#icon-contacts"></use>
+                </svg>
+                <span>Контакты</span>
+              </button>
+              <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу компании.">
+                <svg width="94" height="23">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <div class="main-header__phone-wrapper">
+                <div class="main-header__tel-group">
+                  <a class="main-header__tel" href="tel:88002228781" aria-label="Позвонить в офис компании.">8&nbsp;(800)&nbsp;222-87-81</a>
+                  <a class="main-header__tel" href="tel:88123258780" aria-label="Позвонить в офис компании.">8&nbsp;(812)&nbsp;325-87-80</a>
+                </div>
+                <div class="main-header__tel-wrapper">
+                  <button class="main-header__call" type="button" aria-label="Вперед.">Заказать звонок</button>
+                  <svg width="5" height="25">
+                    <use href="img/sprite.svg#separator"></use>
+                  </svg>
+                  <a class="main-header__whatsapp" href="#">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <div class="main-header__down">
+              <button class="main-header__catalog-button">Каталог</button>
+              <nav class="main-header__nav">
+                <ul class="main-header__nav-list">
+                  <li class="main-header__nav-item">
+                    <a class="main-header__nav-link main-header__nav-link--promotion" href="#">
+                      <span>%</span>
+                      <span>Акции и новости</span>
+                    </a>
+                  </li>
+                  <li class="main-header__nav-item">
+                    <a class="main-header__nav-link" href="#">О магазине</a>
+                  </li>
+                  <li class="main-header__nav-item">
+                    <a class="main-header__nav-link" href="#">Оплата и доставка</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="main-header__additional">
+                <button class="main-header__button" type="button" aria-label="Поиск.">
+                  <svg width="23" height="22">
+                    <use href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <a class="main-header__button" href="#" aria-label="Избранное.">
+                  <svg width="24" height="20">
+                    <use href="img/sprite.svg#heart"></use>
+                  </svg>
+                </a>
+                <button class="main-header__button main-header__button--cart" type="button" aria-label="Корзина.">
+                  <svg width="22" height="22">
+                    <use href="img/sprite.svg#cart"></use>
+                  </svg>
+                  <span>15</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       <main>
         <section class="promo">
           <div class="container">
@@ -529,7 +597,7 @@
                 </svg>
                 <address class="main-footer__address">197183, г.&nbsp;Санкт-Петербург, ул.&nbsp;Хворостова, д.&nbsp;6</address>
               </div>
-              <button class="main-footer__button btn" type="button">
+              <button class="main-footer__button btn" type="button" data-open-modal>
                 <svg width="16" height="20">
                   <use href="img/sprite.svg#feedback"></use>
                 </svg>
@@ -596,36 +664,42 @@
         </div>
       </footer>
       <!-- Модалка -->
-      <div class="modal">
+      <div class="modal" data-modal>
         <div class="modal__wrapper">
-          <button class="modal__close-button" type="button" aria-label="Закрыть попап">
-            <svg width="15" height="15">
-              <use href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-          <h2>Обратная связь</h2>
-          <form action="#" method="post">
-            <div class="modal__fields-wrapper">
-              <input type="text" name="name" minlength="1" placeholder="Имя" required>
-              <input type="tel" name="tel" placeholder="Телефон" required>
-              <input type="email" name="email" placeholder="Email" required>
-              <textarea name="user-message" placeholder="Сообщение" required></textarea>
+          <div class="modal__content">
+
+            <div class="modal__close-button" data-close-modal>
+              <div class="modal__left-right"></div>
+              <div class="modal__right-left"></div>
+              <span class="visually-hidden">Закрыть попап.</span>
             </div>
-            <div class="modal__buttons-wrapper">
-              <button class="modal__button btn" type="submit">
-                <svg width="22" height="19">
-                  <use href="img/sprite.svg#send"></use>
-                </svg>
-                <span>Отправить</span>
-              </button>
-              <div class="modal__file-input">
-                <input type="file" name="file" accept="image/png,image/jpeg">
-                <svg width="20" height="16">
-                  <use href="img/sprite.svg#file"></use>
-                </svg>
+
+
+
+            <h2>Обратная связь</h2>
+            <form action="#" method="post">
+              <div class="modal__fields-wrapper">
+                <input type="text" name="name" minlength="1" placeholder="Имя" required>
+                <input type="tel" name="tel" placeholder="Телефон" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="user-message" placeholder="Сообщение" required></textarea>
               </div>
-            </div>
-          </form>
+              <div class="modal__buttons-wrapper">
+                <button class="modal__button btn" type="submit">
+                  <svg width="22" height="19">
+                    <use href="img/sprite.svg#send"></use>
+                  </svg>
+                  <span>Отправить</span>
+                </button>
+                <div class="modal__file-input">
+                  <input type="file" name="file" accept="image/png,image/jpeg">
+                  <svg width="20" height="16">
+                    <use href="img/sprite.svg#file"></use>
+                  </svg>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

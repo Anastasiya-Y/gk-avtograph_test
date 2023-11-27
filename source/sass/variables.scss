@@ -16,16 +16,19 @@ $color-zambezi:                     #595959;
 $color-zircon:                      #dde9ea;
 $color-white-smoke:                 #f5f5f5;
 
+$color-overlay:                     rgba(0, 0, 0, 0.25);
+
 // Fonts
 
 $fz-default:                        13px;
 
-$ff-montserrat:                     "Montserrat", "Arial", sans-serif;
+$ff-montserrat:                     "Montserrat", "Helvetica", sans-serif;
 
 // Animation
 
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
+$trans-long:                        0.8s $tf-default;
 
 // Viewports
 
@@ -38,3 +41,5 @@ $vp-1440:                           1440px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+$custom-cursor:                     url('../img/cursor.png'), auto;
