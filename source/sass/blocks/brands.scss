@@ -75,11 +75,11 @@
   padding: 10px;
   border: none;
   background-color: $color-whisper;
-  transition: all $trans-default;
+  transition: all $trans-300;
   // cursor: $custom-cursor;
 
   svg {
-    transition: all $trans-default;
+    transition: all $trans-300;
   }
 
   @include vp-768 {

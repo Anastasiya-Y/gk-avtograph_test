@@ -31,12 +31,11 @@
   padding: 2px 10px;
   color: $color-default-black;
   min-width: 100px;
-  transition: color $trans-default;
   // cursor: $custom-cursor;
 
   svg {
     margin-bottom: 12px;
-    transition: fill $trans-default;
+    transition: all $trans-300 ease-in;
   }
 
   h3 {
@@ -44,15 +43,19 @@
     font-weight: 400;
     line-height: normal;
     margin: 0;
+    transition: all $trans-300 ease-in;
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: $color-burnt-orange;
 
     svg {
-      // color: $color-default-white;
+      color: $color-burnt-orange;
+    }
+
+    h3 {
+      color: $color-burnt-orange;
     }
   }
 
@@ -73,6 +76,22 @@
       transform: rotate(90deg);
       margin: 0;
       color: $color-default-white;
+    }
+  }
+}
+
+.goods__link--cutting,
+.goods__link--cleaning,
+.goods__link--grinding,
+.goods__link--brushing,
+.goods__link--filing,
+.goods__link--drilling,
+.goods__link--polishing {
+  &:hover,
+  &:focus {
+
+    svg {
+      transform: rotate(90deg);
     }
   }
 }

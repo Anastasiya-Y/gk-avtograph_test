@@ -16,14 +16,14 @@
   border-radius: 12px;
   cursor: pointer;
 
-  transition: all $trans-default;
+  transition: all $trans-300;
 
   user-select: none;
 
   svg {
     color: $color-sauvignon;
     margin-right: 7px;
-    transition: all $trans-default;
+    transition: all $trans-300;
   }
 
   @include vp-768 {

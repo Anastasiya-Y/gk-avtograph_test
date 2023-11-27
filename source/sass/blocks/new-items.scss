@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  transition: all $trans-long;
+  transition: all $trans-800;
   max-width: 160px;
   // cursor: $custom-cursor;
 
@@ -138,11 +138,11 @@
   padding: 10px;
   border: none;
   background-color: $color-whisper;
-  transition: all $trans-default;
+  transition: all $trans-300;
   // cursor: $custom-cursor;
 
   svg {
-    transition: all $trans-default;
+    transition: all $trans-300;
   }
 
   @include vp-768 {

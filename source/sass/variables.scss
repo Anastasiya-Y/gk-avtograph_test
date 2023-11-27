@@ -26,9 +26,8 @@ $ff-montserrat:                     "Montserrat", "Helvetica", sans-serif;
 
 // Animation
 
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
-$trans-long:                        0.8s $tf-default;
+$trans-300:                         0.3s;
+$trans-800:                         0.8s;
 
 // Viewports
 

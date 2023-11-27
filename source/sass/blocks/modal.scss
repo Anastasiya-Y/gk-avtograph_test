@@ -65,7 +65,7 @@
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  // transition: all $trans-default;
+  // transition: all $trans-300;
 
   &.is-open {
     opacity: 1;
@@ -126,7 +126,7 @@
 		background-color: $color-default-black;
 		border-radius: 2px;
 		transform: rotate(45deg);
-		transition: all $trans-default;
+		transition: all $trans-300;
 	}
 
 	.modal__right-left {
@@ -138,7 +138,7 @@
 		background-color: $color-default-black;
 		border-radius: 2px;
 		transform: rotate(-45deg);
-		transition: all $trans-default;
+		transition: all $trans-300;
 	}
 }
 
