@@ -99,11 +99,11 @@
   padding: 10px;
   border: none;
   background-color: $color-whisper;
-  transition: all $trans-300;
+  transition: all $trans-800;
   // cursor: $custom-cursor;
 
   svg {
-    transition: all $trans-300;
+    transition: all $trans-800;
   }
 
   &:hover,

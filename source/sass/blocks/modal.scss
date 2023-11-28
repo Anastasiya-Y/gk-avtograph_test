@@ -84,7 +84,7 @@
 .modal__content {
   background-color: $color-default-white;
   color: $color-default-black;
-  max-width: 375px;
+  max-width: 435px;
   padding: 48px 46px;
   display: flex;
   flex-direction: column;
@@ -142,8 +142,6 @@
 	}
 }
 
-
-
 .modal__fields-wrapper {
   display: flex;
   flex-direction: column;
@@ -178,9 +176,137 @@
     align-items: flex-start;
     flex-shrink: 0;
     resize: none;
+    margin-bottom: 16px;
   }
 }
 
 .modal__fields-wrapper {
   margin-bottom: 32px;
+}
+
+.modal__checkbox {
+  position: relative;
+
+  display: block;
+  padding-left: 24px;
+
+  // cursor: $custom-cursor;
+}
+
+.modal__checkbox-input {
+  &:hover + .modal__mark-checkbox {
+    border-color: $color-silver;
+  }
+
+  &:focus + .modal__mark-checkbox {
+    border-color: $color-silver;
+  }
+
+  &:disabled + .modal__mark-checkbox,
+  &:disabled + .modal__mark-checkbox + .modal__label-checkbox {
+    border-color: $color-zambezi;
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  &:checked + .modal__mark-checkbox {
+    background-color: $color-gainsboro;
+    border-color: $color-gainsboro;
+  }
+
+  &:checked + .modal__mark-checkbox::before {
+    opacity: 1;
+  }
+}
+
+.modal__label-checkbox {
+  font-size: 12px;
+}
+
+.modal__mark-checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+
+  background-color: $color-default-white;
+  transition: all $trans-300 ease-in;
+  border: 1px solid $color-gainsboro;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 2px;
+
+    width: 7px;
+    height: 6px;
+
+    background-image: url("../img/svg/icon-checkbox.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all $trans-300 ease-in;
+    opacity: 0;
+  }
+}
+
+.modal__file-input {
+	position: relative;
+	display: inline-block;
+
+  input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  input[type=file]:focus + .modal__file-button {
+    background-color: $color-silver;
+  }
+
+  &:hover .modal__file-button {
+    background-color: $color-silver;
+  }
+
+  &:active .modal__file-button {
+    background-color: $color-silver;
+  }
+
+  input[type=file]:disabled + .modal__file-button {
+    background-color: $color-gainsboro;
+  }
+}
+
+.modal__file-button {
+	position: relative;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	// cursor: $custom-cursor;
+  border-radius: 12px;
+  background-color: $color-whisper;
+  height: 47px;
+  width: 58px;
+  padding: 10px;
+  transition: all $trans-300 ease-in;
+}
+
+.modal__buttons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  gap: 8px;
+}
+
+.modal__button {
+  padding: 15px 20px;
+
+  svg {
+    width: 22px;
+    height: 19px;
+    margin-right: 22px;
+  }
 }
