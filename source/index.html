@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="main-header__down">
-              <button class="main-header__catalog-button" type="button">Каталог</button>
+              <button class="main-header__catalog-button" type="button" data-open-catalog>Каталог</button>
               <nav class="main-header__nav">
                 <ul class="main-header__nav-list">
                   <li class="main-header__nav-item">
@@ -806,6 +806,103 @@
               </svg>
             </button>
           </form>
+        </div>
+      </div>
+      <!-- Каталог -->
+      <div class="catalog-sidebar" data-catalog>
+        <div class="catalog-sidebar__wrapper">
+          <div class="catalog-sidebar__content">
+            <div class="catalog-sidebar__header">
+              <button class="catalog-sidebar__close-button" type="button" data-close-catalog>
+                <span>Закрыть</span>
+                <svg width="8" height="16">
+                  <use href="img/sprite.svg#sidebar-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="catalog-sidebar__list">
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--cutting" href="#">
+                  <svg width="35" height="35">
+                    <use href="img/sprite.svg#cutting"></use>
+                  </svg>
+                  <h3>Резка</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--cleaning" href="#">
+                  <svg width="35" height="35">
+                    <use href="img/sprite.svg#cleaning"></use>
+                  </svg>
+                  <h3>Зачистка</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--grinding" href="#">
+                  <svg width="34" height="34">
+                    <use href="img/sprite.svg#grinding"></use>
+                  </svg>
+                  <h3>Шлифование</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--brushing" href="#">
+                  <svg width="34" height="36">
+                    <use href="img/sprite.svg#brushing"></use>
+                  </svg>
+                  <h3>Крацевание</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--filing" href="#">
+                  <svg width="38" height="38">
+                    <use href="img/sprite.svg#filing"></use>
+                  </svg>
+                  <h3>Опиливание</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--scroll-saw" href="#">
+                  <svg width="37" height="36">
+                    <use href="img/sprite.svg#scroll-saw"></use>
+                  </svg>
+                  <h3>Пилки для лобзика</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--drilling" href="#">
+                  <svg width="34" height="35">
+                    <use href="img/sprite.svg#drilling"></use>
+                  </svg>
+                  <h3>Сверление</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--polishing" href="#">
+                  <svg width="33" height="33">
+                    <use href="img/sprite.svg#polishing"></use>
+                  </svg>
+                  <h3>Полировка</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--tool" href="#">
+                  <svg width="38" height="35">
+                    <use href="img/sprite.svg#tool"></use>
+                  </svg>
+                  <h3>Инструмент</h3>
+                </a>
+              </li>
+              <li class="catalog-sidebar__item">
+                <a class="catalog-sidebar__link catalog-sidebar__link--materials" href="#">
+                  <svg width="26" height="34">
+                    <use href="img/sprite.svg#materials"></use>
+                  </svg>
+                  <h3>Материалы</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -62,6 +62,10 @@
   padding: 3px;
   border: none;
   background-color: $color-default-white;
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .contacts-sidebar__main {
