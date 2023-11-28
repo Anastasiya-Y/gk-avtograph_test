@@ -1,0 +1,155 @@
+.contacts-sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $color-overlay-20;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: all $trans-300;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    .contacts-sidebar__wrapper {
+      transform: translateX(0);
+    }
+  }
+}
+
+.contacts-sidebar__wrapper {
+  min-height: 100%;
+  display: flex;
+  align-items: start;
+  // align-items: center;
+  // justify-content: center;
+  // padding: 30px 10px;
+  transition: all $trans-300 ease-out;
+  transform: translateX(-100vw);
+}
+
+.contacts-sidebar__content {
+  padding: 17px 16px 53px 16px;
+  max-width: 518px;
+  background-color: $color-default-white;
+}
+
+.contacts-sidebar__header {
+  display: grid;
+  grid-template-columns: 15px 1fr 14px;
+  gap: 16px;
+  align-items: center;
+  padding: 0 0 17px 54px;
+
+  span {
+    font-size: 20px;
+    font-weight: 900;
+  }
+}
+
+.contacts-sidebar__close-element {
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  width: 14px;
+  height: 22px;
+  user-select: none;
+  cursor: pointer;
+  padding: 3px;
+  border: none;
+  background-color: $color-default-white;
+}
+
+.contacts-sidebar__main {
+  padding: 32px 61px 0 64px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-default-black;
+  }
+}
+
+.contacts-sidebar__subway-wrapper {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contacts-sidebar__subway {
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 8px;
+  align-items: center;
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.contacts-sidebar__address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.contacts-sidebar__working-hours {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 12px;
+  font-size: 14px;
+}
+
+.contacts-sidebar__contacts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.contacts-sidebar__tel {
+  color: $color-default-black;
+}
+
+.contacts-sidebar__email {
+  color: $color-burnt-orange;
+}
+
+.contacts-sidebar__social {
+  grid-template-columns: repeat(3, 20px);
+  margin: 0;
+}
+
+.contacts-sidebar__details {
+  margin-bottom: 174px;
+
+  span {
+    display: block;
+  }
+
+  span:not(:first-child) {
+    font-weight: 300;
+  }
+}
+
+.contacts-sidebar__button {
+  svg {
+    width: 20px;
+    height: 19px;
+    margin-right: 22px;
+  }
+}
