@@ -54,7 +54,6 @@
   &:hover,
   &:focus,
   &:active {
-
     svg {
       color: $color-burnt-orange;
     }
@@ -98,7 +97,6 @@
 .goods__link--polishing {
   &:hover,
   &:focus {
-
     svg {
       transform: rotate(90deg);
     }

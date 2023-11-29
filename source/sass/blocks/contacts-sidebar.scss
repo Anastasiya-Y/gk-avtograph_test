@@ -67,7 +67,7 @@
 .contacts-sidebar__close-element {
   display: flex;
   align-items: center;
-	justify-content: center;
+  justify-content: center;
   width: 14px;
   height: 22px;
   user-select: none;
@@ -80,7 +80,6 @@
     display: none;
   }
 
-
   @include vp-768 {
     svg {
       display: block;
@@ -92,8 +91,6 @@
 .contacts-sidebar__main {
   padding: 32px 61px 0 64px;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 16px;
   display: flex;
   flex-direction: column;
@@ -137,7 +134,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-
 
   @include vp-768 {
     font-size: 15px;

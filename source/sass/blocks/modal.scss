@@ -33,7 +33,6 @@
   @include vp-768 {
     transform: translateY(-100vh);
   }
-
 }
 
 .modal__content {
@@ -54,12 +53,11 @@
 }
 
 .modal__close-button {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
   width: 30px;
   height: 30px;
   user-select: none;
-  cursor: pointer;
   position: absolute;
   right: 22px;
   top: 22px;
@@ -67,29 +65,29 @@
   background-color: $color-default-white;
   cursor: pointer;
 
-	.modal__left-right {
-		height: 3px;
-		width: 18px;
+  .modal__left-right {
+    height: 3px;
+    width: 18px;
     top: 15px;
     left: 7px;
-		position: absolute;
-		background-color: $color-default-black;
-		border-radius: 2px;
-		transform: rotate(45deg);
-		transition: all $trans-300;
-	}
+    position: absolute;
+    background-color: $color-default-black;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all $trans-300;
+  }
 
-	.modal__right-left {
-		height: 3px;
-		width: 18px;
+  .modal__right-left {
+    height: 3px;
+    width: 18px;
     top: 15px;
     right: 5px;
-		position: absolute;
-		background-color: $color-default-black;
-		border-radius: 2px;
-		transform: rotate(-45deg);
-		transition: all $trans-300;
-	}
+    position: absolute;
+    background-color: $color-default-black;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all $trans-300;
+  }
 }
 
 .modal__fields-wrapper {
@@ -98,6 +96,7 @@
   align-items: flex-start;
   gap: 16px;
   align-self: stretch;
+  margin-bottom: 32px;
 
   input,
   textarea {
@@ -128,10 +127,6 @@
     resize: none;
     margin-bottom: 16px;
   }
-}
-
-.modal__fields-wrapper {
-  margin-bottom: 32px;
 }
 
 .modal__checkbox {
@@ -181,7 +176,6 @@
   left: 0;
   width: 12px;
   height: 12px;
-
   background-color: $color-default-white;
   transition: all $trans-300 ease-in;
   border: 1px solid $color-gainsboro;
@@ -204,10 +198,10 @@
 }
 
 .modal__file-input {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 
-  input[type=file] {
+  input[type="file"] {
     position: absolute;
     z-index: -1;
     opacity: 0;
@@ -216,7 +210,7 @@
     height: 0;
   }
 
-  input[type=file]:focus + .modal__file-button {
+  input[type="file"]:focus + .modal__file-button {
     background-color: $color-silver;
   }
 
@@ -228,14 +222,14 @@
     background-color: $color-silver;
   }
 
-  input[type=file]:disabled + .modal__file-button {
+  input[type="file"]:disabled + .modal__file-button {
     background-color: $color-gainsboro;
   }
 }
 
 .modal__file-button {
-	position: relative;
-	display: flex;
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
