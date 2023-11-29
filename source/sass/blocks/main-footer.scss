@@ -28,7 +28,7 @@
   }
 
   @include vp-1200 {
-    grid-template-columns: 22.47% 5.11% 45.06% 9.7% 17.66%;
+    grid-template-columns: 22.47% 5.11% 45.06% 6.7% 1fr;
     grid-template-rows: auto;
   }
 }
@@ -43,6 +43,7 @@
   @include vp-768 {
     grid-column: 1 / 2;
     margin: 0;
+    gap: 36px;
   }
 }
 
@@ -56,6 +57,7 @@
 
   @include vp-768 {
     display: block;
+    margin-top: 3px;
   }
 }
 
@@ -66,7 +68,7 @@
   grid-template-columns: auto 1fr;
   gap: 16px;
   color: $color-whisper;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
 
   svg {
@@ -75,7 +77,15 @@
 }
 
 .main-footer__work-hours-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 27px;
+
+  @include vp-768 {
+    grid-template-columns: 1fr auto;
+
+    svg {
+      margin-right: 4px;
+    }
+  }
 }
 
 .main-footer__email {
@@ -117,6 +127,7 @@
   @include vp-768 {
     grid-column: 5 / 6;
     margin: 0;
+    justify-self: end;
   }
 }
 
@@ -124,15 +135,23 @@
   color: $color-whisper;
   font-size: 20px;
   font-weight: 900;
-  margin-bottom: 6px;
-  // cursor: $custom-cursor;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .main-footer__work-hours {
   span {
     display: block;
-    font-size: 14px;
-    text-align: left;
+    font-size: 12px;
+
+  }
+
+  @include vp-768 {
+    order: -1;
+
+    span {
+      text-align: right;
+    }
   }
 }
 
@@ -140,13 +159,18 @@
   display: inline-block;
   color: $color-burnt-orange;
   align-self: center;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
+  font-size: 11px;
 
   background-color: $color-transparent;
   border: none;
-  // cursor: $custom-cursor;
+  cursor: pointer;
 
   user-select: none;
+
+  @include vp-768 {
+    align-self: end;
+  }
 }
 
 .main-footer__social {
@@ -158,15 +182,17 @@
   font-size: 14px;
 
   p {
-    margin: 0 0 19px 0;
+    margin: 0 0 25px 0;
     color: $color-zambezi;
   }
 
   span {
     color: $color-whisper;
+    font-size: 14px;
   }
 
   @include vp-768 {
+    font-size: 12px;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     margin-top: 64px;

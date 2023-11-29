@@ -12,7 +12,10 @@ const openCatalog = () => {
 
 const closeCatalog = () => {
   catalog.classList.remove('is-open');
-  body.classList.remove('scroll-lock');
+  const menu = document.querySelector('[data-menu]');
+  if (!menu.classList.contains('is-open')) {
+    body.classList.remove('scroll-lock');
+  }
 };
 
 const setCatalog = () => {

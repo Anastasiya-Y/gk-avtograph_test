@@ -17,33 +17,37 @@
         <div class="container">
           <div class="main-header__wrapper">
             <div class="main-header__up">
-              <button class="main-header__contacts-button" type="button" data-open-contacts>
-                <svg width="13" height="22">
-                  <use href="img/sprite.svg#icon-contacts"></use>
+
+              <button class="main-header__mobile-button" type="button" aria-label="Открыть меню." data-open-menu>
+                <svg width="29" height="25">
+                  <use href="img/sprite.svg#menu-open"></use>
                 </svg>
-                <span>Контакты</span>
               </button>
+
+
               <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу компании.">
                 <svg width="94" height="23">
                   <use href="img/sprite.svg#logo"></use>
                 </svg>
               </a>
-              <div class="main-header__phone-wrapper">
-                <div class="main-header__tel-group">
-                  <a class="main-header__tel" href="tel:88002228781" aria-label="Позвонить в офис компании.">8&nbsp;(800)&nbsp;222-87-81</a>
-                  <a class="main-header__tel" href="tel:88123258780" aria-label="Позвонить в офис компании.">8&nbsp;(812)&nbsp;325-87-80</a>
-                </div>
-                <div class="main-header__tel-wrapper">
-                  <button class="main-header__call" type="button" data-open-modal>Заказать звонок</button>
-                  <svg width="5" height="25">
-                    <use href="img/sprite.svg#separator"></use>
-                  </svg>
-                  <a class="main-header__whatsapp" href="#">WhatsApp</a>
-                </div>
-              </div>
+
+              <button class="main-header__cart main-header__cart--up" type="button" aria-label="Корзина.">
+                <svg width="22" height="22">
+                  <use href="img/sprite.svg#cart"></use>
+                </svg>
+                <span>15</span>
+              </button>
+
             </div>
-            <div class="main-header__down">
-              <button class="main-header__catalog-button" type="button" data-open-catalog>Каталог</button>
+
+            <div class="main-header__down" data-menu>
+              <div class="main-header__catalog-button-wrapper">
+                <button class="main-header__catalog-button" type="button" data-open-catalog>Каталог</button>
+                <svg width="8" height="16">
+                  <use href="img/sprite.svg#sidebar-arrow"></use>
+                </svg>
+              </div>
+
               <nav class="main-header__nav">
                 <ul class="main-header__nav-list">
                   <li class="main-header__nav-item">
@@ -66,18 +70,37 @@
                     <use href="img/sprite.svg#icon-search"></use>
                   </svg>
                 </button>
-                <a class="main-header__button" href="#" aria-label="Избранное.">
-                  <svg width="24" height="20">
+                <a class="main-header__button main-header__button--heart" href="#" aria-label="Избранное.">
+                  <svg width="24" height="20" >
                     <use href="img/sprite.svg#heart"></use>
                   </svg>
                 </a>
-                <button class="main-header__button main-header__button--cart" type="button" aria-label="Корзина.">
+                <button class="main-header__cart main-header__cart--down" type="button" aria-label="Корзина.">
                   <svg width="22" height="22">
                     <use href="img/sprite.svg#cart"></use>
                   </svg>
                   <span>15</span>
                 </button>
               </div>
+              <div class="main-header__phone-wrapper">
+                <div class="main-header__tel-group">
+                  <a class="main-header__tel" href="tel:88002228781" aria-label="Позвонить в офис компании.">8&nbsp;(800)&nbsp;222-87-81</a>
+                  <a class="main-header__tel" href="tel:88123258780" aria-label="Позвонить в офис компании.">8&nbsp;(812)&nbsp;325-87-80</a>
+                </div>
+                <div class="main-header__tel-wrapper">
+                  <button class="main-header__call" type="button" data-open-modal>Заказать звонок</button>
+                  <svg width="5" height="25">
+                    <use href="img/sprite.svg#separator"></use>
+                  </svg>
+                  <a class="main-header__whatsapp" href="#">WhatsApp</a>
+                </div>
+              </div>
+              <button class="main-header__contacts-button" type="button" data-open-contacts>
+                <svg width="13" height="22">
+                  <use href="img/sprite.svg#icon-contacts"></use>
+                </svg>
+                <span>Контакты</span>
+              </button>
             </div>
           </div>
         </div>
@@ -153,8 +176,8 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <div class="new-items__like">
-                      <svg width="24" height="20">
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20" >
                         <use href="img/sprite.svg#heart"></use>
                       </svg>
                     </div>
@@ -168,8 +191,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -188,9 +213,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -201,8 +228,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -221,9 +250,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -234,8 +265,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -254,9 +287,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -267,8 +302,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -287,9 +324,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -300,8 +339,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -320,9 +361,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -333,8 +376,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -353,9 +398,11 @@
                       </svg>
                       <span>Бесплатно</span>
                     </div>
-                    <svg width="24" height="20">
-                      <use href="img/sprite.svg#heart"></use>
-                    </svg>
+                    <div class="new-items__like" data-heart>
+                      <svg width="24" height="20">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="new-items__info">
                     <div class="new-items__image-wrapper">
@@ -366,8 +413,10 @@
                         <img src="img/content/new-items/grinding-disc.png" srcset="img/content/new-items/grinding-disc@2x.png 2x" width="121" height="98" alt="Фото диска шлифовального перфорированного." loading="lazy">
                       </picture>
                     </div>
-                    <h3>Диск шлифовальный перфорированный</h3>
-                    <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    <div class="new-items__description-wrapper">
+                      <h3>Диск шлифовальный перфорированный</h3>
+                      <p>ABRAforce с&nbsp;липучкой Рxbvgcfперфорированный</p>
+                    </div>
                     <span>3&nbsp;850&nbsp;р.</span>
                     <button class="new-items__button btn" type="button">
                       <svg width="12" height="12">
@@ -675,7 +724,7 @@
               <span class="visually-hidden">Закрыть попап.</span>
             </button>
             <h2>Обратная связь</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" data-form>
               <div class="modal__fields-wrapper">
                 <input type="text" name="name" minlength="1" placeholder="Имя" aria-label="Введите имя." required>
                 <input type="tel" name="tel" placeholder="Телефон" aria-label="Введите номер телефона." required>
@@ -763,6 +812,13 @@
                   <a class="social__link" href="#" aria-label="Страница компании в Instagram." target="_blank">
                     <svg width="20" height="20">
                       <use href="img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item social__item--whatsapp">
+                  <a class="social__link" href="#" aria-label="Страница компании в WhatsApp." target="_blank">
+                    <svg width="20" height="20">
+                      <use href="img/sprite.svg#icon-whatsapp"></use>
                     </svg>
                   </a>
                 </li>

@@ -27,17 +27,6 @@ const initSwiper = () => {
       nextEl: '.new-items__swiper-button--next',
       prevEl: '.new-items__swiper-button--prev',
     },
-    //centeredSlides: true,
-    //cssMode: true,
-    watchSlidesProgress: true,
-    //watchOverflow: true,
-    // simulateTouch: false,
-    // watchSlidesVisibility: true,
-    // effect: 'creative',
-    /* creativeEffect: {
-      perspective: false,
-    }*/
-	  //centerInsufficientSlides: true,
     breakpoints: {
       320: {
         slidesPerView: 2,

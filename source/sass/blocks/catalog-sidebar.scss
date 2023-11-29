@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: $color-overlay-20;
+  background-color: $color-transparent;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -19,6 +19,10 @@
       transform: translateX(0);
     }
   }
+
+  @include vp-768 {
+    background-color: $color-overlay-20;
+  }
 }
 
 .catalog-sidebar__wrapper {
@@ -29,31 +33,39 @@
   // justify-content: center;
   // padding: 30px 10px;
   transition: all $trans-300 ease-out;
-  transform: translateX(-100vw);
+
+  transform: translateX(100vw);
+
+  @include vp-768 {
+    transform: translateX(-100vw);
+  }
 }
 
 .catalog-sidebar__content {
-  padding: 21px 15px;
-  max-width: 340px;
   background-color: $color-default-white;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
+
+  max-width: 100%;
+  position: absolute;
+  top: 134px;
+  padding: 0 15px 21px 15px;
+
+  @include vp-768 {
+    max-width: 340px;
+    top: 0;
+    padding: 21px 15px;
+  }
 }
 
 .catalog-sidebar__header {
   padding: 0 0 20px 82px;
-  position: relative;
+  display: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $color-default-black;
+  @include vp-768 {
+    display: block;
   }
 }
 
@@ -79,6 +91,20 @@
   padding: 0;
   list-style-type: none;
   overflow-y: scroll;
+
+  @include vp-768 {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-default-black;
+    }
+  }
 }
 
 
@@ -90,6 +116,8 @@
   padding: 14px 0 16px 10px;
   color: $color-default-black;
   // cursor: $custom-cursor;
+
+
 
   svg {
     transition: all $trans-300 ease-in;

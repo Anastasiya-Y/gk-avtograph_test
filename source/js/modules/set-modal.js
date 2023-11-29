@@ -4,6 +4,7 @@ const modalOpenElements = document.querySelectorAll('[data-open-modal]');
 const body = document.querySelector('body');
 const modal = document.querySelector('[data-modal]');
 const modalCloseElements = document.querySelectorAll('[data-close-modal]');
+const form = document.querySelector('[data-form]');
 
 const openModal = () => {
   modal.classList.add('is-open');
@@ -12,7 +13,10 @@ const openModal = () => {
 
 const closeModal = () => {
   modal.classList.remove('is-open');
-  body.classList.remove('scroll-lock');
+  const menu = document.querySelector('[data-menu]');
+  if (!menu.classList.contains('is-open')) {
+    body.classList.remove('scroll-lock');
+  }
 };
 
 const setModal = () => {
@@ -50,6 +54,11 @@ const setModal = () => {
     if (!evt.target.closest('.modal__content')) {
       closeModal(evt.target.closest('.modal'));
     }
+  });
+
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    closeModal();
   });
 };
 

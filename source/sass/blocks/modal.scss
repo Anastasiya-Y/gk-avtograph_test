@@ -123,6 +123,7 @@
   padding: 3px;
   border: none;
   background-color: $color-default-white;
+  cursor: pointer;
 
 	/*&:active .modal__left-right {
 		transform: rotate(-45deg);
@@ -305,7 +306,7 @@
 	display: flex;
   align-items: center;
   justify-content: center;
-	// cursor: $custom-cursor;
+  cursor: pointer;
   border-radius: 12px;
   background-color: $color-whisper;
   height: 47px;

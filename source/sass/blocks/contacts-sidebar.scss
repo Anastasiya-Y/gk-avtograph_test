@@ -2,14 +2,13 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: $color-overlay-20;
   top: 0;
   left: 0;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
-  transition: all $trans-300;
+  transition: all $trans-300 ease;
 
   &.is-open {
     opacity: 1;
@@ -19,23 +18,39 @@
       transform: translateX(0);
     }
   }
+
+  @include vp-768 {
+    background-color: $color-overlay-20;
+  }
 }
 
 .contacts-sidebar__wrapper {
-  min-height: 100%;
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: start;
   // align-items: center;
   // justify-content: center;
   // padding: 30px 10px;
   transition: all $trans-300 ease-out;
-  transform: translateX(-100vw);
+  transform: translateY(100vh);
+
+  @include vp-768 {
+    transform: translateX(-100vw);
+  }
 }
 
 .contacts-sidebar__content {
   padding: 17px 16px 53px 16px;
-  max-width: 518px;
+  width: 100%;
   background-color: $color-default-white;
+  align-self: stretch;
+  position: relative;
+  top: 70px;
+
+  @include vp-768 {
+    top: 0;
+    max-width: 518px;
+  }
 }
 
 .contacts-sidebar__header {
@@ -64,7 +79,15 @@
   background-color: $color-default-white;
 
   svg {
-    flex-shrink: 0;
+    display: none;
+  }
+
+
+  @include vp-768 {
+    svg {
+      display: block;
+      flex-shrink: 0;
+    }
   }
 }
 
@@ -74,6 +97,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &::before {
     content: "";
@@ -134,8 +160,18 @@
 }
 
 .contacts-sidebar__social {
-  grid-template-columns: repeat(3, 20px);
+  grid-template-columns: repeat(4, 20px);
   margin: 0;
+
+  @include vp-768 {
+    grid-template-columns: repeat(3, 20px);
+  }
+}
+
+.social__item--whatsapp {
+  @include vp-768 {
+    display: none;
+  }
 }
 
 .contacts-sidebar__details {
@@ -151,6 +187,8 @@
 }
 
 .contacts-sidebar__button {
+  margin-top: auto;
+
   svg {
     width: 20px;
     height: 19px;

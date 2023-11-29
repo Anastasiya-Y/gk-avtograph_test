@@ -11,13 +11,21 @@
     margin: 0;
   }
 
+  svg {
+    margin-top: 4px;
+  }
+
   @include vp-768 {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+
+    h2 {
+      font-size: 19px;
+    }
   }
 }
 
 .brands__content-wrapper {
-  padding: 0 0 97px 0;
+  padding: 0 0 100px 0;
 }
 
 .brands__container {
@@ -27,14 +35,9 @@
 .brands__link {
   color: $color-burnt-orange;
   margin-top: 4px;
-  //cursor: $custom-cursor;
-
-  svg {
-    // transform: scale(0.64);
-  }
 
   @include vp-768 {
-    // transform: scale(1);
+    font-size: 11px;
   }
 }
 
@@ -143,7 +146,7 @@
   border: none;
   background-color: $color-whisper;
   transition: all $trans-300;
-  // cursor: $custom-cursor;
+  cursor: pointer;
 
   svg {
     transition: all $trans-300;
