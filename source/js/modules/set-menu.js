@@ -36,7 +36,6 @@ const setMenu = () => {
 
   // Добавляем закрытие каталога по клику вне модалки
   menu.addEventListener('click', (evt) => {
-    console.log(evt.target);
     if (!evt.target.closest('.main-header__down')) {
       closeMenu();
     }

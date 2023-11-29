@@ -6,7 +6,7 @@
   margin-bottom: 30px;
 
   h2 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 900;
     margin: 0;
   }
@@ -18,20 +18,13 @@
   @include vp-768 {
     margin-bottom: 33px;
     gap: 15px;
-
-    h2 {
-      font-size: 19px;
-    }
   }
 }
 
 .new-items__link {
   color: $color-burnt-orange;
   margin-top: 4px;
-
-  @include vp-768 {
-    font-size: 11px;
-  }
+  font-size: 11px;
 }
 
 .new-items__container {
@@ -47,31 +40,31 @@
 .new-items__slide {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 2px 13px 9px 10px;
   transition: all $trans-800;
   max-width: 160px;
   cursor: default;
   height: auto;
+  box-shadow: 0 0 66px 0 $color-box-shadow;
+
+  &:hover {
+    box-shadow: 0 0 66px 0 $color-burnt-orange;
+
+    img {
+      transform: scale(1.09);
+    }
+  }
 
   @include vp-768 {
     max-width: none;
     width: 23.2%;
     padding: 17px 19px 39px 20px;
-
-    &:hover {
-      box-shadow: 0 0 66px 0 $color-burnt-orange;
-
-      img {
-        transform: scale(1.09);
-      }
-    }
   }
 }
 
 .new-items__additional {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 2px;
   position: relative;
 
   & > span {
@@ -82,7 +75,7 @@
     background-color: $color-burnt-orange;
     border-radius: 25px;
     padding: 5px 10px;
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
@@ -100,6 +93,7 @@
   @include vp-768 {
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2px;
 
     & > span {
       display: none;
@@ -107,8 +101,14 @@
 
     .new-items__slide--new & > span {
       display: flex;
-      min-width: 120px;
+      min-width: 106px;
       top: -1px;
+    }
+  }
+
+  @include vp-1200 {
+    .new-items__slide--new & > span {
+      min-width: 120px;
     }
   }
 
@@ -136,7 +136,7 @@
   gap: 18px;
 
   h3 {
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
     font-weight: 300;
     line-height: normal;
@@ -152,14 +152,22 @@
 
   & > span {
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 900;
     margin-top: auto;
   }
 
   @include vp-768 {
+    h3 {
+      font-size: 12px;
+    }
+
     p {
       display: block;
+    }
+
+    & > span {
+      font-size: 18px;
     }
 
     gap: 25px;
@@ -203,15 +211,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 12px;
 
   img {
-    object-fit: cover;
-    width: 100%;
+    object-fit: contain;
+    max-width: 100%;
     height: auto;
     transition: all $trans-800 ease;
   }
 
   @include vp-768 {
+    margin: 0;
+
     img {
       width: 163px;
       height: 163px;
@@ -224,10 +235,22 @@
   cursor: pointer;
   align-self: center;
   align-items: center;
-  padding: 15px 10px 10px 10px;
+  padding: 7px 10px 10px 10px;
+
+  svg {
+    transform: scale(0.9);
+  }
 
   @include vp-375 {
-    font-size: 10px;
+    font-size: 9px;
+
+    svg {
+      transform: scale(1);
+    }
+  }
+
+  @include vp-768 {
+    padding: 15px 10px 10px 10px;
     min-width: 144px;
   }
 }
@@ -240,7 +263,7 @@
   color: $color-grey;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-58%);
   z-index: 1;
 
   padding: 10px;
@@ -285,7 +308,7 @@
 }
 
 .new-items__swiper-button--prev {
-  left: 0;
+  left: -19px;
 
   svg {
     transform: rotate(180deg);
@@ -293,10 +316,12 @@
 }
 
 .new-items__swiper-button--next {
-  right: 0;
+  right: -19px;
 }
 
 .new-items__description-wrapper {
-  padding-left: 14px;
+  @include vp-768 {
+    padding-left: 14px;
+  }
 }
 

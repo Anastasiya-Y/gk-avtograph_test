@@ -121,7 +121,6 @@
   right: 22px;
   top: 22px;
   padding: 3px;
-  border: none;
   background-color: $color-default-white;
   cursor: pointer;
 
@@ -205,8 +204,6 @@
 
   display: none;
   padding-left: 24px;
-
-  // cursor: $custom-cursor;
 
   @include vp-768 {
     display: block;

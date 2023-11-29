@@ -28,14 +28,12 @@
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: start;
-  // align-items: center;
-  // justify-content: center;
-  // padding: 30px 10px;
   transition: all $trans-300 ease-out;
   transform: translateY(100vh);
 
   @include vp-768 {
     transform: translateX(-100vw);
+    min-height: 100vh;
   }
 }
 
@@ -125,14 +123,25 @@
   align-items: center;
 
   span {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @include vp-768 {
+    span {
+      font-size: 16px;
+    }
   }
 }
 
 .contacts-sidebar__address {
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
+
+
+  @include vp-768 {
+    font-size: 15px;
+  }
 }
 
 .contacts-sidebar__working-hours {
@@ -149,6 +158,16 @@
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 16px;
+}
+
+.contacts-sidebar__tel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  @include vp-768 {
+    display: block;
+  }
 }
 
 .contacts-sidebar__tel {

@@ -3,10 +3,10 @@
   grid-template-columns: repeat(3, auto);
   align-items: start;
   gap: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
 
   h2 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 900;
     margin: 0;
   }
@@ -17,15 +17,15 @@
 
   @include vp-768 {
     margin-bottom: 36px;
-
-    h2 {
-      font-size: 19px;
-    }
   }
 }
 
 .brands__content-wrapper {
-  padding: 0 0 100px 0;
+  padding: 0 0 53px 0;
+
+  @include vp-768 {
+    padding: 0 0 100px 0;
+  }
 }
 
 .brands__container {
@@ -35,9 +35,16 @@
 .brands__link {
   color: $color-burnt-orange;
   margin-top: 4px;
+  font-size: 11px;
+
+  svg {
+    transform: scale(0.7);
+  }
 
   @include vp-768 {
-    font-size: 11px;
+    svg {
+      transform: scale(1);
+    }
   }
 }
 
@@ -132,7 +139,7 @@
 }
 
 .brands__swiper-button {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 13.68px;
@@ -153,6 +160,7 @@
   }
 
   @include vp-768 {
+    display: flex;
     width: 50px;
     height: 47px;
     border-radius: 19px;

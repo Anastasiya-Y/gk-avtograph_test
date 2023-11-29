@@ -1,18 +1,16 @@
 .goods {
-  padding: 80px 0;
+  padding: 63px 0 57px 0;
 
   h2 {
-    font-size: 20px;
-    font-weight: 900;
-    margin: 0 0 32px 0;
+    font-size: 19px;
+    margin: 1px 0 32px;
   }
 
   @include vp-768 {
-    padding: 72px 0 77px 0;
+    padding: 72px 0 72px 0;
 
     h2 {
-      font-size: 19px;
-      margin-bottom: 43px;
+      margin: 0 0 33px 0;
     }
   }
 }
@@ -38,10 +36,10 @@
   padding: 2px 10px;
   color: $color-default-black;
   min-width: 100px;
-  // cursor: $custom-cursor;
+  min-height: 100%;
 
   svg {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     transition: all $trans-300 ease-in;
   }
 
@@ -84,6 +82,10 @@
       margin: 0;
       color: $color-default-white;
     }
+  }
+
+  @include vp-768 {
+    margin-bottom: 12px;
   }
 }
 

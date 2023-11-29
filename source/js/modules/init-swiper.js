@@ -27,6 +27,7 @@ const initSwiper = () => {
       nextEl: '.new-items__swiper-button--next',
       prevEl: '.new-items__swiper-button--prev',
     },
+    watchSlideProgress: true,
     breakpoints: {
       320: {
         slidesPerView: 2,
@@ -34,7 +35,7 @@ const initSwiper = () => {
       },
       375: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 16,
       },
       768: {
         slidesPerView: 'auto',
