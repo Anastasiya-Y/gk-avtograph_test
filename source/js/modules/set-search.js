@@ -19,7 +19,7 @@ const closeSearch = () => {
 };
 
 const setSearch = () => {
-  // Добавляем слушатели событий на все элементы открытия контактов
+  // Добавляем слушатели событий на все элементы открытия поиска
   if (searchOpenElements.length > 0) {
     for (let i = 0; i < searchOpenElements.length; i++) {
       const searchOpenElement = searchOpenElements[i];
@@ -29,7 +29,7 @@ const setSearch = () => {
     }
   }
 
-  // Добавляем слушатели событий на все элементы закрытия контактов
+  // Добавляем слушатели событий на все элементы закрытия поиска
   if (searchCloseElements.length > 0) {
     for (let i = 0; i < searchCloseElements.length; i++) {
       const searchCloseElement = searchCloseElements[i];
@@ -39,7 +39,7 @@ const setSearch = () => {
     }
   }
 
-  // Добавляем закрытие контактов по клавише Esc
+  // Добавляем закрытие поиска по клавише Esc
   document.addEventListener('keydown', (evt) => {
     if (isEscapeKey(evt)) {
       if (document.querySelector('.search.is-open')) {
@@ -48,7 +48,7 @@ const setSearch = () => {
     }
   });
 
-  // Добавляем закрытие контактов по клику вне модалки
+  // Добавляем закрытие поиска по клику вне поиска
   search.addEventListener('click', (evt) => {
     if (!evt.target.closest('.search__form')) {
       closeSearch();

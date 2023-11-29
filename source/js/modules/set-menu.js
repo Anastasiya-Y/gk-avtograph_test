@@ -25,7 +25,7 @@ const setMenu = () => {
     });
   }
 
-  // Добавляем закрытие каталога по клавише Esc
+  // Добавляем закрытие меню по клавише Esc
   document.addEventListener('keydown', (evt) => {
     if (isEscapeKey(evt)) {
       if (document.querySelector('.main-header__down.is-open')) {
@@ -34,7 +34,7 @@ const setMenu = () => {
     }
   });
 
-  // Добавляем закрытие каталога по клику вне модалки
+  // Добавляем закрытие меню по клику вне меню
   menu.addEventListener('click', (evt) => {
     if (!evt.target.closest('.main-header__down')) {
       closeMenu();

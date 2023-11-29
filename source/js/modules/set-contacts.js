@@ -48,7 +48,7 @@ const setContacts = () => {
     }
   });
 
-  // Добавляем закрытие контактов по клику вне модалки
+  // Добавляем закрытие контактов по клику вне контактов
   contacts.addEventListener('click', (evt) => {
     if (!evt.target.closest('.contacts-sidebar__content')) {
       closeContacts();
